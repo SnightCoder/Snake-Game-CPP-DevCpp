@@ -1,7 +1,7 @@
 #include <iostream>
 #include <conio.h>//kbhit() and getch()
 #include <unistd.h>//sleep and usleep
-#include <windows.h>// I want to hide the cursor
+#include <windows.h>// I want to hide the cursor and colored something
 using namespace std;
 
 // Note:
@@ -156,11 +156,11 @@ int main()
 		//Snake bite itself
 		for(int i=1;i<sL;i++){
 			if(p[0].X==p[i].X && p[0].Y==p[i].Y){
-				//check if player go outside of map
 				if(moveE)
 				g=0;
 			}
 		}
+		//check if player go outside of map
 		if(p[0].X>=maxX-1||p[0].X<=0||p[0].Y>=maxY-1||p[0].Y<=0) g=0;
 		
 		p[1].cX=p[0].X;
