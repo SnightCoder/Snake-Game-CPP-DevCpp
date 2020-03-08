@@ -199,6 +199,7 @@ int main()
 		if(tx==p[0].X&&ty==p[0].Y){
 			randomT(maxX,maxY); 
 			sL++;
+			cout << '\a';
 		}
 		
 		for(int i=0;i<maxX;i++){
@@ -238,7 +239,11 @@ int main()
 
 	}
 //	cout<<"Score: "<<sL-2<<endl;
-	sleep(2);
+	Beep(523.2511,500);  // 523.2511 hertz (C5) for 500 milliseconds
+    Beep(587.3295,500);
+    Beep(659.2551,500);
+    Beep(698.4565,500);
+    Beep(783.9909,500);
 	sL=1;
 	x=0;
 	y=0;
