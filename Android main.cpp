@@ -16,7 +16,7 @@ using namespace std;
  
 int maxX=10, maxY=20;//max map
 int maxL=maxX*maxY;//max length
-int sL=5;//Snake Length
+int sL=1;//Snake Length
 bool moveE=true;//move enable
  
 int x=0,y=0;
@@ -131,7 +131,7 @@ int main()
 	
 		
 		//Snake bite itself
-		for(int i=1;i<sL;i++){
+		for(int i=1;i<sL-1;i++){
 			if(p[0].X==p[i].X && p[0].Y==p[i].Y){
 				if(moveE)
 				g=0;

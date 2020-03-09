@@ -120,7 +120,7 @@ int main()
             c='d';
             break;
         default:
-            c='0';
+            //c='0';
             break;
         }
 	}
@@ -132,17 +132,23 @@ int main()
 		char input=(char)c;
 		
 		if(c=='w'){
+			if(x!=1)
 			x=-1; y=0;
 		}
 		if(c=='s'){
+			if(x!=-1)
 			x=1; y=0;
 		}
 		
 		if(c=='d'){
-			x=0; y=1;
+			x=0;
+			if(y!=-1)
+			y=1;
 		}
 		if(c=='a'){
-			x=0; y=-1;
+			x=0;
+			if(y!=1)
+			y=-1;
 		}
 		
 		moveE=!moveE;
@@ -154,7 +160,7 @@ int main()
 	
 		
 		//Snake bite itself
-		for(int i=1;i<sL;i++){
+		for(int i=1;i<sL-1;i++){
 			if(p[0].X==p[i].X && p[0].Y==p[i].Y){
 				if(moveE)
 				g=0;
